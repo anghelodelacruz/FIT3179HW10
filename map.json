@@ -38,12 +38,10 @@
       "layer": [
         {
           "mark": {
-            "type": "circle",
-            "tooltip": {
-              "content": {"field": "Postcode No", "type": "nominal"}
-            }
+            "type": "circle"
           },
           "encoding": {
+            "tooltip": {"field": "Lat", "type": "quantitative"},
             "color": {
               "value": "steelblue"
             },
