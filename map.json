@@ -40,7 +40,7 @@
           "mark": {
             "type": "circle",
             "tooltip": {
-              "content": "data"
+              "content": {"field": "Postcode No", "type": "nominal"}
             }
           },
           "encoding": {
