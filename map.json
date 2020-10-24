@@ -43,11 +43,13 @@
           "encoding": {
             "tooltip": {"field": "Lat", "type": "quantitative"},
             "color": {
-              "value": "steelblue"
+              "field": "Light Condition Desc",
+              "type": "nominal"
             },
-            "size": {
-              "value": "4"
-            }
+          "size": {
+            "value": "4"
+            },
+          "legend": {"format": ".1s"}
           }
         }
       ]
