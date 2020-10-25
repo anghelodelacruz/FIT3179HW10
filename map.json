@@ -44,12 +44,11 @@
           }
   },
           "mark": {
-            "type": "circle",
-            "tooltip": {
-              "content": "data"
-            }
+            "type": "circle"
           },
           "encoding": {
+            "tooltip": [{"field": "LGA_NAME", "type": "nominal", "title": "Suburb"},
+            {"field": "Postcode No", "type": "nominal", "title": "Suburb"}],
             "color": {
               "field": "Light Condition Desc",
               "type": "nominal"},
@@ -59,7 +58,7 @@
           "legend": {"format": ".1s"},
           "opacity": {
             "condition": {"selection": "Light Condition", "value": 1},
-            "value": 0
+            "value": 0.0
             }
           }
         }
