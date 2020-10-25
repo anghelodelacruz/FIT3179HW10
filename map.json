@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 800,
-  "height": 500,
+  "width": 1000,
+  "height": 600,
   "title": "Dot map of accidents in Victoria in 2005.",
+  
   "projection": {
     "type": "mercator"
   },
@@ -23,7 +24,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/anghelodelacruz/fit3179/main/2005.csv"
+        "url": "https://raw.githubusercontent.com/anghelodelacruz/FIT3179HW10/main/2005.csv"
       },
       "encoding": {
         "longitude": {
@@ -37,19 +38,29 @@
       },
       "layer": [
         {
+          "selection": {
+            "Light Condition": {
+            "type": "multi", "fields": ["Light Condition Desc"], "bind": "legend"
+          }
+  },
           "mark": {
-            "type": "circle"
+            "type": "circle",
+            "tooltip": {
+              "content": "data"
+            }
           },
           "encoding": {
-            "tooltip": {"field": "Lat", "type": "quantitative"},
             "color": {
               "field": "Light Condition Desc",
-              "type": "nominal"
-            },
+              "type": "nominal"},
           "size": {
             "value": "4"
             },
-          "legend": {"format": ".1s"}
+          "legend": {"format": ".1s"},
+          "opacity": {
+            "condition": {"selection": "Light Condition", "value": 1},
+            "value": 0.2
+            }
           }
         }
       ]
